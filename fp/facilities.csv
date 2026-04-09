@@ -1,0 +1,9 @@
+id,name,category,city,address,phone,walk_in,hours,cost_level,notes
+1,Sample City Hospital Emergency Department,ER,Cambridge,123 Main St Cambridge MA,617-000-0001,no,24/7,3,Use for severe symptoms
+2,Sample General Hospital Emergency Department,ER,Boston,55 Example Ave Boston MA,617-000-0002,no,24/7,3,Emergency care
+3,Sample Urgent Care Cambridge,URGENT_CARE,Cambridge,10 First St Cambridge MA,617-000-0100,yes,8am-8pm,2,Walk-in urgent care
+4,Sample Urgent Care Boston,URGENT_CARE,Boston,20 Second St Boston MA,617-000-0200,yes,9am-7pm,2,Walk-in urgent care
+5,Sample Primary Care Clinic Cambridge,PRIMARY_CARE,Cambridge,30 Third St Cambridge MA,617-000-0300,no,Mon-Fri 9am-5pm,1,Appointment usually required
+6,Sample Primary Care Clinic Boston,PRIMARY_CARE,Boston,40 Fourth St Boston MA,617-000-0400,no,Mon-Fri 9am-5pm,1,Primary care
+7,Sample Community Health Center,COMMUNITY_CLINIC,Cambridge,50 Fifth St Cambridge MA,617-000-0500,yes,Mon-Sat 9am-6pm,1,Community clinic and basic services
+8,Sample Telehealth Line,TELEHEALTH,Remote,Online,617-000-0600,yes,24/7,1,Good for non-urgent questions
