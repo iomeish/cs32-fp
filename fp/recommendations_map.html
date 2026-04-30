@@ -17,7 +17,7 @@
             <meta name="viewport" content="width=device-width,
                 initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
             <style>
-                #map_8775bbab0fbae4616056e5856525ce43 {
+                #map_c91a6906ba370ab9f509379760842b97 {
                     position: relative;
                     width: 100.0%;
                     height: 100.0%;
@@ -54,16 +54,16 @@
 <body>
     
     
-            <div class="folium-map" id="map_8775bbab0fbae4616056e5856525ce43" ></div>
+            <div class="folium-map" id="map_c91a6906ba370ab9f509379760842b97" ></div>
         
 </body>
 <script>
     
     
-            var map_8775bbab0fbae4616056e5856525ce43 = L.map(
-                "map_8775bbab0fbae4616056e5856525ce43",
+            var map_c91a6906ba370ab9f509379760842b97 = L.map(
+                "map_c91a6906ba370ab9f509379760842b97",
                 {
-                    center: [42.3351, -71.1078],
+                    center: [42.3736, -71.1097],
                     crs: L.CRS.EPSG3857,
                     ...{
   "zoom": 12,
@@ -73,12 +73,13 @@
 
                 }
             );
+            L.control.scale().addTo(map_c91a6906ba370ab9f509379760842b97);
 
             
 
         
     
-            var tile_layer_68b904b342872f88b785910b63d9f4cc = L.tileLayer(
+            var tile_layer_4b263105ea6e4b2a7897a315ce3a0364 = L.tileLayer(
                 "https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png",
                 {
   "minZoom": 0,
@@ -95,55 +96,155 @@
             );
         
     
-            tile_layer_68b904b342872f88b785910b63d9f4cc.addTo(map_8775bbab0fbae4616056e5856525ce43);
+            tile_layer_4b263105ea6e4b2a7897a315ce3a0364.addTo(map_c91a6906ba370ab9f509379760842b97);
         
     
-            var marker_9140edc9bbc571eb8df69bfa8c23a8a6 = L.marker(
-                [42.3351, -71.1078],
+            var tile_layer_49a12ca8d29b8ed2867e26851696d31b = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
                 {
+  "minZoom": 0,
+  "maxZoom": 19,
+  "maxNativeZoom": 19,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
 }
-            ).addTo(map_8775bbab0fbae4616056e5856525ce43);
+
+            );
         
     
-        var popup_115066938e9637ee91294287f92870d8 = L.popup({
-  "maxWidth": "100%",
+            tile_layer_49a12ca8d29b8ed2867e26851696d31b.addTo(map_c91a6906ba370ab9f509379760842b97);
+        
+    
+            var tile_layer_2588839a892a87ce33319e16da9d1d26 = L.tileLayer(
+                "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}",
+                {
+  "minZoom": 0,
+  "maxZoom": 18,
+  "maxNativeZoom": 18,
+  "noWrap": false,
+  "attribution": "Tiles \u00a9 Esri",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_2588839a892a87ce33319e16da9d1d26.addTo(map_c91a6906ba370ab9f509379760842b97);
+        
+    
+            var circle_marker_54292c6c381bc8922bda6afb09963155 = L.circleMarker(
+                [42.3736, -71.1097],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "cyan", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 9, "stroke": true, "weight": 2}
+            ).addTo(map_c91a6906ba370ab9f509379760842b97);
+        
+    
+        var popup_0f71d219e960f08b854f244308062e41 = L.popup({
+  "maxWidth": 240,
 });
 
         
             
-                var html_010fecf28a0218a9c65b8e4def1afbe0 = $(`<div id="html_010fecf28a0218a9c65b8e4def1afbe0" style="width: 100.0%; height: 100.0%;">Brigham and Women's Hospital Emergency Department<br>Category: ER<br>City: Boston<br>Score: 34<br>Why: city match, walk-in not required, cost considered</div>`)[0];
-                popup_115066938e9637ee91294287f92870d8.setContent(html_010fecf28a0218a9c65b8e4def1afbe0);
+                var html_d4d69a59e6cca394911f1a2c0d85bd89 = $(`<div id="html_d4d69a59e6cca394911f1a2c0d85bd89" style="width: 100.0%; height: 100.0%;">             <div style="                 width: 200px;                 font-family: Arial, sans-serif;                 font-size: 13px;                 line-height: 1.35;             ">                 <div style="                     font-size: 15px;                     font-weight: bold;                     margin-bottom: 6px;                     color: #0b5394;                 ">                     Your location                 </div>                 <div style="word-break: break-word;">Cambridge city center</div>             </div>             </div>`)[0];
+                popup_0f71d219e960f08b854f244308062e41.setContent(html_d4d69a59e6cca394911f1a2c0d85bd89);
             
         
 
-        marker_9140edc9bbc571eb8df69bfa8c23a8a6.bindPopup(popup_115066938e9637ee91294287f92870d8)
+        circle_marker_54292c6c381bc8922bda6afb09963155.bindPopup(popup_0f71d219e960f08b854f244308062e41)
         ;
 
         
     
     
-            var marker_b1dcda31b9a88b97746f9d527b1e283a = L.marker(
-                [42.3626, -71.0687],
+            circle_marker_54292c6c381bc8922bda6afb09963155.bindTooltip(
+                `<div>
+                     Your location
+                 </div>`,
                 {
+  "sticky": true,
 }
-            ).addTo(map_8775bbab0fbae4616056e5856525ce43);
+            );
         
     
-        var popup_acfac01cf710dd975d23a376030a2e7b = L.popup({
-  "maxWidth": "100%",
+            var marker_f969f81f356e1685434d81d7bceca1b7 = L.marker(
+                [42.3939, -71.1455],
+                {
+}
+            ).addTo(map_c91a6906ba370ab9f509379760842b97);
+        
+    
+            var icon_66a7d9555e154d1c3becc71f512ce0a6 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_01009b3d09187da2f1382682efe79e15 = L.popup({
+  "maxWidth": 360,
 });
 
         
             
-                var html_ca6623562716a87ecc242a03376e5d2f = $(`<div id="html_ca6623562716a87ecc242a03376e5d2f" style="width: 100.0%; height: 100.0%;">Massachusetts General Hospital Emergency Department<br>Category: ER<br>City: Boston<br>Score: 34<br>Why: city match, walk-in not required, cost considered</div>`)[0];
-                popup_acfac01cf710dd975d23a376030a2e7b.setContent(html_ca6623562716a87ecc242a03376e5d2f);
+                var html_52290a9571d3eedd82d78d022f0dcfe4 = $(`<div id="html_52290a9571d3eedd82d78d022f0dcfe4" style="width: 100.0%; height: 100.0%;">     <div style="         width: 320px;         font-family: Arial, sans-serif;         font-size: 13px;         color: #222;     ">         <div style="             font-size: 16px;             font-weight: bold;             margin-bottom: 10px;             color: #1f3a5f;             line-height: 1.25;             word-break: break-word;         ">             Beth Israel Lahey Health Primary Care Cambridge         </div>          <div style="margin-bottom: 10px;">             <span style="                 display: inline-block;                 background-color: #eef3ff;                 color: #333;                 padding: 4px 10px;                 border-radius: 10px;                 font-weight: bold;             ">                 PRIMARY_CARE             </span>         </div>               <div style="display: flex; margin-bottom: 6px; line-height: 1.35;">         <div style="width: 95px; font-weight: bold; color: #222;">City:</div>         <div style="flex: 1; color: #333; word-break: break-word;">Cambridge</div>     </div>                   <div style="display: flex; margin-bottom: 6px; line-height: 1.35;">         <div style="width: 95px; font-weight: bold; color: #222;">Score:</div>         <div style="flex: 1; color: #333; word-break: break-word;">56</div>     </div>                   <div style="display: flex; margin-bottom: 6px; line-height: 1.35;">         <div style="width: 95px; font-weight: bold; color: #222;">Distance:</div>         <div style="flex: 1; color: #333; word-break: break-word;">2.3 miles away</div>     </div>                   <div style="display: flex; margin-bottom: 6px; line-height: 1.35;">         <div style="width: 95px; font-weight: bold; color: #222;">Walk-in:</div>         <div style="flex: 1; color: #333; word-break: break-word;">no</div>     </div>                   <div style="display: flex; margin-bottom: 6px; line-height: 1.35;">         <div style="width: 95px; font-weight: bold; color: #222;">Cost:</div>         <div style="flex: 1; color: #333; word-break: break-word;">1</div>     </div>                   <div style="display: flex; margin-bottom: 6px; line-height: 1.35;">         <div style="width: 95px; font-weight: bold; color: #222;">Address:</div>         <div style="flex: 1; color: #333; word-break: break-word;">100 Cambridgepark Dr Cambridge MA</div>     </div>                   <div style="display: flex; margin-bottom: 6px; line-height: 1.35;">         <div style="width: 95px; font-weight: bold; color: #222;">Phone:</div>         <div style="flex: 1; color: #333; word-break: break-word;">617-677-9600</div>     </div>               <div style="             margin-top: 10px;             padding: 10px 12px;             background-color: #f3f3f3;             border-radius: 8px;             line-height: 1.4;             word-break: break-word;         ">             <div style="font-weight: bold; margin-bottom: 4px;">Why recommended:</div>             <div>city match, walk-in not required, cost considered, close</div>         </div>     </div>     </div>`)[0];
+                popup_01009b3d09187da2f1382682efe79e15.setContent(html_52290a9571d3eedd82d78d022f0dcfe4);
             
         
 
-        marker_b1dcda31b9a88b97746f9d527b1e283a.bindPopup(popup_acfac01cf710dd975d23a376030a2e7b)
+        marker_f969f81f356e1685434d81d7bceca1b7.bindPopup(popup_01009b3d09187da2f1382682efe79e15)
         ;
 
         
     
+    
+            marker_f969f81f356e1685434d81d7bceca1b7.bindTooltip(
+                `<div>
+                     Beth Israel Lahey Health Primary Care Cambridge
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_f969f81f356e1685434d81d7bceca1b7.setIcon(icon_66a7d9555e154d1c3becc71f512ce0a6);
+            
+    
+            var poly_line_9de95f61d91d0c42cc88d134aa57f595 = L.polyline(
+                [[42.3736, -71.1097], [42.3939, -71.1455]],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.45, "smoothFactor": 1.0, "stroke": true, "weight": 2}
+            ).addTo(map_c91a6906ba370ab9f509379760842b97);
+        
+    
+            var layer_control_76bd71f59f63e4bd827040f8a6cbdfcc_layers = {
+                base_layers : {
+                    "Clean map" : tile_layer_4b263105ea6e4b2a7897a315ce3a0364,
+                    "Street map" : tile_layer_49a12ca8d29b8ed2867e26851696d31b,
+                    "Satellite" : tile_layer_2588839a892a87ce33319e16da9d1d26,
+                },
+                overlays :  {
+                },
+            };
+            let layer_control_76bd71f59f63e4bd827040f8a6cbdfcc = L.control.layers(
+                layer_control_76bd71f59f63e4bd827040f8a6cbdfcc_layers.base_layers,
+                layer_control_76bd71f59f63e4bd827040f8a6cbdfcc_layers.overlays,
+                {
+  "position": "topright",
+  "collapsed": false,
+  "autoZIndex": true,
+}
+            ).addTo(map_c91a6906ba370ab9f509379760842b97);
+
+        
 </script>
 </html>

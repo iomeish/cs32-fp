@@ -1,3 +1,6 @@
+from geopy.distance import geodesic
+
+
 def normalize(text):
     """
     Normalize text for easier comparison.
@@ -51,7 +54,27 @@ def filter_by_walk_in(facilities, need_walk_in):
     return matches
 
 
-def score_facility(facility, desired_city, need_walk_in):
+def distance_miles(facility, user_location):
+    """
+    Return the geodesic distance in miles from the user's location
+    to a facility. Return None if distance is not available.
+    """
+    if user_location is None:
+        return None
+
+    try:
+        lat = float(facility.latitude)
+        lon = float(facility.longitude)
+    except ValueError:
+        return None
+
+    if lat == 0 and lon == 0:
+        return None
+
+    return geodesic(user_location, (lat, lon)).miles
+
+
+def score_facility(facility, desired_city, need_walk_in, user_location=None):
     """
     Assign a recommendation score.
 
@@ -59,6 +82,7 @@ def score_facility(facility, desired_city, need_walk_in):
     - city match
     - walk-in match
     - lower cost level
+    - proximity to the user
     """
     score = 0
     reasons = []
@@ -85,25 +109,50 @@ def score_facility(facility, desired_city, need_walk_in):
     except ValueError:
         pass
 
-    return score, reasons
+    dist = distance_miles(facility, user_location)
+    if dist is not None:
+        if dist <= 2:
+            score += 25
+            reasons.append("very close")
+        elif dist <= 5:
+            score += 18
+            reasons.append("close")
+        elif dist <= 10:
+            score += 10
+            reasons.append("moderate distance")
+        else:
+            score += 3
+            reasons.append("farther away")
+
+    return score, reasons, dist
 
 
-def rank_facilities(facilities, desired_city, need_walk_in):
+def rank_facilities(facilities, desired_city, need_walk_in, user_location=None):
     """
     Return a ranked list of tuples:
-    (score, facility, reasons)
+    (score, facility, reasons, distance)
     """
     ranked = []
 
     for facility in facilities:
-        score, reasons = score_facility(facility, desired_city, need_walk_in)
-        ranked.append((score, facility, reasons))
+        score, reasons, dist = score_facility(
+            facility, desired_city, need_walk_in, user_location
+        )
+        ranked.append((score, facility, reasons, dist))
 
-    ranked.sort(key=lambda item: (-item[0], item[1].name))
+    ranked.sort(
+        key=lambda item: (
+            -item[0],
+            item[3] if item[3] is not None else float("inf"),
+            item[1].name
+        )
+    )
     return ranked
 
 
-def recommend_facilities(facilities, desired_category, desired_city, need_walk_in):
+def recommend_facilities(
+    facilities, desired_category, desired_city, need_walk_in, user_location=None
+):
     """
     First try exact matches with category, city, and walk-in.
     If no exact match exists, fall back to the same care category
@@ -114,7 +163,11 @@ def recommend_facilities(facilities, desired_category, desired_city, need_walk_i
     exact_matches = filter_by_walk_in(city_matches, need_walk_in)
 
     if len(exact_matches) > 0:
-        return "exact", rank_facilities(exact_matches, desired_city, need_walk_in)
+        return "exact", rank_facilities(
+            exact_matches, desired_city, need_walk_in, user_location
+        )
 
-    fallback_matches = rank_facilities(category_matches, desired_city, need_walk_in)
+    fallback_matches = rank_facilities(
+        category_matches, desired_city, need_walk_in, user_location
+    )
     return "fallback", fallback_matches
