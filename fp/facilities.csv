@@ -1,9 +1,21 @@
-id,name,category,city,address,phone,walk_in,hours,cost_level,notes
-1,Sample City Hospital Emergency Department,ER,Cambridge,123 Main St Cambridge MA,617-000-0001,no,24/7,3,Use for severe symptoms
-2,Sample General Hospital Emergency Department,ER,Boston,55 Example Ave Boston MA,617-000-0002,no,24/7,3,Emergency care
-3,Sample Urgent Care Cambridge,URGENT_CARE,Cambridge,10 First St Cambridge MA,617-000-0100,yes,8am-8pm,2,Walk-in urgent care
-4,Sample Urgent Care Boston,URGENT_CARE,Boston,20 Second St Boston MA,617-000-0200,yes,9am-7pm,2,Walk-in urgent care
-5,Sample Primary Care Clinic Cambridge,PRIMARY_CARE,Cambridge,30 Third St Cambridge MA,617-000-0300,no,Mon-Fri 9am-5pm,1,Appointment usually required
-6,Sample Primary Care Clinic Boston,PRIMARY_CARE,Boston,40 Fourth St Boston MA,617-000-0400,no,Mon-Fri 9am-5pm,1,Primary care
-7,Sample Community Health Center,COMMUNITY_CLINIC,Cambridge,50 Fifth St Cambridge MA,617-000-0500,yes,Mon-Sat 9am-6pm,1,Community clinic and basic services
-8,Sample Telehealth Line,TELEHEALTH,Remote,Online,617-000-0600,yes,24/7,1,Good for non-urgent questions
+id,name,category,city,address,phone,walk_in,hours,cost_level,notes,latitude,longitude
+1,Massachusetts General Hospital Emergency Department,ER,Boston,55 Fruit St Boston MA,617-726-2000,no,24/7,3,Use for severe symptoms,42.3626,-71.0687
+2,Brigham and Women's Hospital Emergency Department,ER,Boston,75 Francis St Boston MA,617-732-5500,no,24/7,3,Emergency care,42.3351,-71.1078
+3,Cambridge Health Alliance Emergency Department,ER,Cambridge,1493 Cambridge St Cambridge MA,617-665-1000,no,24/7,3,Emergency department,42.3736,-71.1097
+4,Mount Auburn Hospital Emergency Department,ER,Cambridge,330 Mount Auburn St Cambridge MA,617-492-3500,no,24/7,3,Emergency care,42.3746,-71.1334
+5,Beth Israel Lahey Health Urgent Care Chelsea,URGENT_CARE,Boston,1000 Broadway Chelsea MA,617-975-6200,yes,8am-8pm,2,Urgent care near Boston,42.3915,-71.0370
+6,CareWell Urgent Care Back Bay,URGENT_CARE,Boston,565 Boylston St Boston MA,617-307-7070,yes,8am-8pm,2,Walk-in urgent care,42.3503,-71.0786
+7,Mass General Brigham Urgent Care Cambridge,URGENT_CARE,Cambridge,42 Broadway Cambridge MA,617-724-4050,yes,8am-8pm,2,Walk-in urgent care,42.3632,-71.0843
+8,CareWell Urgent Care Somerville,URGENT_CARE,Somerville,349 Broadway Somerville MA,617-302-7337,yes,8am-8pm,2,Walk-in urgent care,42.3967,-71.1218
+9,CHA Urgent Care Malden,URGENT_CARE,Malden,195 Canal St Malden MA,781-338-0500,yes,8am-7pm,2,Walk-in urgent care,42.4255,-71.0678
+10,Beth Israel Lahey Health Primary Care Cambridge,PRIMARY_CARE,Cambridge,100 Cambridgepark Dr Cambridge MA,617-677-9600,no,Mon-Fri 9am-5pm,1,Appointment usually required,42.3939,-71.1455
+11,Mass General Brigham Primary Care Boston,PRIMARY_CARE,Boston,50 Staniford St Boston MA,617-726-2000,no,Mon-Fri 9am-5pm,1,Primary care,42.3653,-71.0636
+12,CHA Primary Care Somerville,PRIMARY_CARE,Somerville,236 Highland Ave Somerville MA,617-591-6300,no,Mon-Fri 9am-5pm,1,Primary care,42.3872,-71.0995
+13,Brookline Primary Care,PRIMARY_CARE,Brookline,1180 Beacon St Brookline MA,617-232-9500,no,Mon-Fri 9am-5pm,1,Routine care,42.3446,-71.1263
+14,CHA Windsor Street Care Center,COMMUNITY_CLINIC,Cambridge,119 Windsor St Cambridge MA,617-665-3600,yes,Mon-Sat 9am-6pm,1,Community clinic and basic services,42.3661,-71.0950
+15,East Boston Neighborhood Health Center,COMMUNITY_CLINIC,Boston,10 Gove St Boston MA,617-569-5800,yes,Mon-Sat 8am-6pm,1,Community clinic,42.3693,-71.0395
+16,Somerville Community Health Center,COMMUNITY_CLINIC,Somerville,26 Central St Somerville MA,617-625-6600,yes,Mon-Fri 9am-6pm,1,Community health center,42.3860,-71.0978
+17,Teladoc Telehealth,TELEHEALTH,Remote,Online,800-835-2362,yes,24/7,1,Non-urgent remote care,0,0
+18,Amwell Telehealth,TELEHEALTH,Remote,Online,844-733-3627,yes,24/7,1,Virtual visit option,0,0
+19,CVS MinuteClinic Cambridge,URGENT_CARE,Cambridge,624 Massachusetts Ave Cambridge MA,866-389-2727,yes,9am-7pm,1,Minor illness walk-in care,42.3648,-71.1032
+20,CVS MinuteClinic Boston,URGENT_CARE,Boston,231 Mass Ave Boston MA,866-389-2727,yes,9am-7pm,1,Minor illness walk-in care,42.3477,-71.0878
